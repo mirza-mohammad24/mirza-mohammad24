@@ -1,0 +1,46 @@
+name: regenerate ascii portrait
+
+on:
+  push:
+    paths:
+      # only re-run when something that actually affects the output changes.
+      # avi-ascii.svg itself is deliberately NOT in this list -- if it were,
+      # the commit this workflow makes would trigger itself again. (GitHub
+      # also blocks the default GITHUB_TOKEN from re-triggering a push-based
+      # workflow run at all, so this is belt-and-suspenders, not strictly
+      # required -- but it also stops the job running on unrelated commits,
+      # like README edits, which the token protection wouldn't do.)
+      - 'data/photo.png'
+      - 'scripts/make_ascii_svg.py'
+      - 'fonts/ramp.woff2'
+  workflow_dispatch:   # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install pillow numpy
+
+      - run: python3 scripts/make_ascii_svg.py
+
+      - run: |
+          # commit only if the generated SVG actually changed -- otherwise
+          # every push to the watched paths creates an empty commit
+          if [ -z "$(git status --porcelain -- avi-ascii.svg)" ]; then
+            echo "No change to avi-ascii.svg, skipping commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add avi-ascii.svg
+          git commit -m "portrait: regenerate"
+          git push
