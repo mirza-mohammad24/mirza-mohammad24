@@ -49,17 +49,8 @@ def generate_terminal_block(image_path="data/photo.png", output_path="avi-ascii.
 
     img = img.resize((cols, rows), Image.Resampling.LANCZOS)
 
-    # numpy array instead of img.load(): 'L' mode always gives one int per
-    # pixel, but Pylance's stub for PixelAccess can't express that -- it types
-    # the return as `float | tuple[int, ...]` to cover every possible mode,
-    # which is what triggered the "/" operator error. Indexing a numpy array
-    # gives an unambiguous scalar, so the type checker stops complaining.
     pixels = np.array(img)
 
-    # Leading "." instead of " " -- this is the fix for the hair loss.
-    # A leading space is invisible, so the darkest pixels (your hair) were
-    # mapping straight to blank space and disappearing into the dark
-    # background rect. A leading "." still reads as "dark" but stays visible.
     RAMP = ".`',-~:;!>+=i?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 
     char_w = 7.74
