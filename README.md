@@ -11,8 +11,8 @@
 
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./heatmap-dark.svg?v=1">
-  <source media="(prefers-color-scheme: light)" srcset="./heatmap-light.svg?v=1">
+  <source media="(prefers-color-scheme: dark)" srcset="./heatmap-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./heatmap-light.svg">
   <img src="./heatmap-light.svg?v=1" width="820" alt="Animated Contribution Heatmap"/>
 </picture>
 
