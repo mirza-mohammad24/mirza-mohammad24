@@ -2,7 +2,11 @@
 
 <img src="./avi-ascii.svg" width="460" alt="Mirza Mohammad Abbas"/>
 
-<img src="./stats.svg" width="620" alt="Contributions in the last year"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./stats-light.svg">
+  <img src="./stats-light.svg" width="620" alt="Contributions in the last year"/>
+</picture>
 
 <br>
 
@@ -103,8 +107,16 @@ elegant HTML5 Canvas grid.
 
 <div align="center">
 
-<img src="./streak.svg" width="620" alt="Current and longest streak"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./streak-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./streak-light.svg">
+  <img src="./streak-light.svg" width="620" alt="Current and longest streak"/>
+</picture>
 
-<img src="./langs.svg" width="620" alt="Top languages by bytes and by repo"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./langs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./langs-light.svg">
+  <img src="./langs-light.svg" width="620" alt="Top languages by bytes and by repo"/>
+</picture>
 
 </div>

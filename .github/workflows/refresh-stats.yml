@@ -31,7 +31,7 @@ jobs:
         # resolve without needing a working-directory change
 
       - run: |
-          FILES="stats.svg streak.svg langs.svg"
+          FILES="stats-dark.svg stats-light.svg streak-dark.svg streak-light.svg langs-dark.svg langs-light.svg"
           if [ -z "$(git status --porcelain -- $FILES)" ]; then
             echo "No change to stats, skipping commit."
             exit 0
