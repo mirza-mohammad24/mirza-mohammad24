@@ -132,7 +132,8 @@ def render_heatmap(weeks, font_css, fam_reg, fam_bold, theme):
         if week["contributionDays"]:
             first_day = dt.date.fromisoformat(week["contributionDays"][0]["date"])
             if first_day.month != last_month:
-                body += f'<text x="{x}" y="{pad_y - 8}" font-family="{fam_reg}" font-size="10" fill="{theme["muted"]}">{first_day.strftime("%b")}</text>\n'
+                # FIX: Using single quotes around '{fam_reg}' right here to prevent XML parsing errors
+                body += f'<text x="{x}" y="{pad_y - 8}" font-family=\'{fam_reg}\' font-size="10" fill="{theme["muted"]}">{first_day.strftime("%b")}</text>\n'
                 last_month = first_day.month
 
         for day in week["contributionDays"]:
