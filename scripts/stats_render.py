@@ -33,9 +33,9 @@ def render_hero(total, active_days, best_week, weekly_totals, font_css, fam_reg,
         area = f"{pad},{chart_top + chart_h} " + line + f" {pad + (n-1)*step:.1f},{chart_top + chart_h}"
 
         body += f'''
-    <polyline points="{area}" fill="{theme['fg']}" fill-opacity="0.1" stroke="none"/>
-    <polyline points="{line}" fill="none" stroke="{theme['fg']}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
-    <circle cx="{pts[-1][0]:.1f}" cy="{pts[-1][1]:.1f}" r="3.5" fill="{theme['bg']}" stroke="{theme['fg']}" stroke-width="2"/>
+    <polyline points="{area}" fill="{theme['accent']}" fill-opacity="0.12" stroke="none"/>
+    <polyline points="{line}" fill="none" stroke="{theme['accent']}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="{pts[-1][0]:.1f}" cy="{pts[-1][1]:.1f}" r="3.5" fill="{theme['bg']}" stroke="{theme['accent']}" stroke-width="2"/>
 '''
     return svg_wrap(width, height, body, font_css, theme)
 
