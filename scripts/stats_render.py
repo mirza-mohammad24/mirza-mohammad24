@@ -1,4 +1,5 @@
 from stats_common import svg_wrap, esc, fmt_date
+import datetime as dt
 
 def render_hero(total, active_days, best_week, weekly_totals, font_css, fam_reg, fam_bold, theme):
     width, height = 700, 200
@@ -102,5 +103,56 @@ def render_langs(langs, font_css, fam_reg, fam_bold, theme):
     <rect x="{bar2_x}" y="{y - 12}" width="{bar2_w}" height="{bar_h}" rx="4" fill="{theme['rule']}"/>
     <rect x="{bar2_x}" y="{y - 12}" width="{fill_w:.1f}" height="{bar_h}" rx="4" fill="{color}"/>
     <text x="{bar2_x + bar2_w + 12}" y="{y}" font-family='{fam_reg}' font-size="12" fill="{theme['muted']}">{lang["repo_count"]}</text>'''
+
+    return svg_wrap(width, height, body, font_css, theme)
+
+def render_heatmap(weeks, font_css, fam_reg, fam_bold, theme):
+    width, height = 820, 150
+    pad_x, pad_y = 24, 30
+    box_size, gap = 11, 4
+
+    body = f'''
+    <style>
+        @keyframes dropIn {{
+            0% {{ opacity: 0; transform: translateY(-4px); }}
+            100% {{ opacity: 1; transform: translateY(0); }}
+        }}
+        .day {{
+            opacity: 0;
+            animation: dropIn 0.35s ease-out forwards;
+        }}
+    </style>
+'''
+
+    last_month = -1
+    for w_idx, week in enumerate(weeks):
+        x = pad_x + w_idx * (box_size + gap)
+        
+        # Determine when to print the month label at the top
+        if week["contributionDays"]:
+            first_day = dt.date.fromisoformat(week["contributionDays"][0]["date"])
+            if first_day.month != last_month:
+                body += f'<text x="{x}" y="{pad_y - 8}" font-family="{fam_reg}" font-size="10" fill="{theme["muted"]}">{first_day.strftime("%b")}</text>\n'
+                last_month = first_day.month
+
+        for day in week["contributionDays"]:
+            # Calculate row alignment (0 = Sunday, 6 = Saturday)
+            d_obj = dt.date.fromisoformat(day["date"])
+            weekday = (d_obj.weekday() + 1) % 7 
+            y = pad_y + weekday * (box_size + gap)
+            
+            count = day["contributionCount"]
+            if count == 0: level = 0
+            elif count < 3: level = 1
+            elif count < 6: level = 2
+            elif count < 10: level = 3
+            else: level = 4
+
+            color = theme["heatmap"][level]
+            
+            # The math that creates the diagonal sweeping animation
+            delay = (w_idx * 0.02) + (weekday * 0.02)
+            
+            body += f'<rect class="day" x="{x}" y="{y}" width="{box_size}" height="{box_size}" rx="2" fill="{color}" style="animation-delay: {delay:.2f}s" />\n'
 
     return svg_wrap(width, height, body, font_css, theme)

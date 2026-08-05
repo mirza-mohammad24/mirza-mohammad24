@@ -2,12 +2,21 @@
 
 <img src="./avi-ascii.svg" width="460" alt="Mirza Mohammad Abbas"/>
 
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./stats-light.svg">
   <img src="./stats-light.svg" width="620" alt="Contributions in the last year"/>
 </picture>
 
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./heatmap-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="./heatmap-light.svg?v=1">
+  <img src="./heatmap-light.svg?v=1" width="820" alt="Animated Contribution Heatmap"/>
+</picture>
+
+<br>
 <br>
 
 <a href="https://www.linkedin.com/in/mirza-mohammad-abbas/">

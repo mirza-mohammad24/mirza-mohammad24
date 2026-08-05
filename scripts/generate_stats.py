@@ -24,7 +24,7 @@ import sys
 import urllib.request
 
 from stats_common import font_face_block
-from stats_render import render_hero, render_streak, render_langs
+from stats_render import render_hero, render_streak, render_langs, render_heatmap
 
 API_URL = "https://api.github.com/graphql"
 
@@ -192,32 +192,36 @@ def main():
     current, current_range, longest, longest_range = compute_streaks(days, today)
     langs = compute_top_languages(user["repositories"])
 
-    # --- NEW: Calculate the extra hero stats ---
     active_days = sum(1 for d in days if d["contributionCount"] > 0)
     best_week = max(weeks) if weeks else 0
-    # -----------------------------------------
 
     font_css, fam_reg, fam_bold = font_face_block()
 
     themes = {
-        "dark": {"bg": "#0d1117", "fg": "#e6edf3", "muted": "#7d8590", "rule": "#30363d", "accent": "#39d353"},
-        "light": {"bg": "#ffffff", "fg": "#24292f", "muted": "#57606a", "rule": "#d0d7de", "accent": "#2da44e"}
+        "dark": {
+            "bg": "#0d1117", "fg": "#e6edf3", "muted": "#7d8590", "rule": "#30363d", "accent": "#39d353",
+            "heatmap": ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+        },
+        "light": {
+            "bg": "#ffffff", "fg": "#24292f", "muted": "#57606a", "rule": "#d0d7de", "accent": "#2da44e",
+            "heatmap": ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
+        }
     }
 
     outputs = {}
     for theme_name, theme_colors in themes.items():
-        # Notice we are now passing active_days and best_week into render_hero
         outputs[f"stats-{theme_name}.svg"] = render_hero(total, active_days, best_week, weeks, font_css, fam_reg, fam_bold, theme_colors)
         outputs[f"streak-{theme_name}.svg"] = render_streak(current, current_range, longest, longest_range, font_css, fam_reg, fam_bold, theme_colors)
         outputs[f"langs-{theme_name}.svg"] = render_langs(langs, font_css, fam_reg, fam_bold, theme_colors)
+        
+        # Generating the new Heatmap SVGs using the exact week data from the calendar
+        outputs[f"heatmap-{theme_name}.svg"] = render_heatmap(calendar["weeks"], font_css, fam_reg, fam_bold, theme_colors)
 
     for filename, svg in outputs.items():
         with open(filename, "w", encoding="utf-8") as f:
             f.write(svg)
 
-    print(f"Wrote {', '.join(outputs.keys())} -- total={total}, "
-          f"current_streak={current}, longest_streak={longest}, "
-          f"top_language={langs[0]['name'] if langs else 'n/a'}")
+    print(f"Wrote {', '.join(outputs.keys())} -- total={total}")
 
 if __name__ == "__main__":
     main()
