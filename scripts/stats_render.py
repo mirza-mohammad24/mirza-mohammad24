@@ -54,7 +54,7 @@ def render_streak(current, current_range, longest, longest_range, font_css, fam_
 
     body = block(24, "current streak", current, current_range)
     body += block(col_w + 24, "longest streak", longest, longest_range)
-    body += f'\n    <line x1="{col_w}" y1="20" x2="{col_w}" y2="{height - 20}" stroke="{theme['rule']}" stroke-width="1"/>'
+    body += f'\n    <line x1="{col_w}" y1="20" x2="{col_w}" y2="{height - 20}" stroke="{theme["rule"]}" stroke-width="1"/>'
     return svg_wrap(width, height, body, font_css, theme)
 
 
