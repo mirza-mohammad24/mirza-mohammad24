@@ -17,11 +17,11 @@
     </style>
     <rect width="100%" height="100%" fill="#ffffff" rx="8"/>
 
-    <text x="24" y="56" font-family='"JBM Data Bold", "Courier New", monospace' font-size="42" fill="#24292f">4</text>
+    <text x="24" y="56" font-family='"JBM Data Bold", "Courier New", monospace' font-size="42" fill="#24292f">6</text>
     <text x="24" y="76" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#57606a">current streak</text>
-    <text x="24" y="98" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#57606a">Aug 4 - Aug 7, 2026</text>
-    <text x="374.0" y="56" font-family='"JBM Data Bold", "Courier New", monospace' font-size="42" fill="#24292f">5</text>
+    <text x="24" y="98" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#57606a">Aug 4 - Aug 9, 2026</text>
+    <text x="374.0" y="56" font-family='"JBM Data Bold", "Courier New", monospace' font-size="42" fill="#24292f">6</text>
     <text x="374.0" y="76" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#57606a">longest streak</text>
-    <text x="374.0" y="98" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#57606a">Oct 19 - Oct 23, 2025</text>
+    <text x="374.0" y="98" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#57606a">Aug 4 - Aug 9, 2026</text>
     <line x1="350.0" y1="20" x2="350.0" y2="110" stroke="#d0d7de" stroke-width="1"/>
 </svg>
