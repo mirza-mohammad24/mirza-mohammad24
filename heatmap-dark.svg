@@ -28,7 +28,6 @@
         }
     </style>
 <text x="24" y="22" font-family='"JBM Data", "Courier New", monospace' font-size="10" fill="#7d8590">Aug</text>
-<rect class="day" x="24" y="60" width="11" height="11" rx="2" fill="#161b22" style="animation-delay: 0.04s" />
 <rect class="day" x="24" y="75" width="11" height="11" rx="2" fill="#161b22" style="animation-delay: 0.06s" />
 <rect class="day" x="24" y="90" width="11" height="11" rx="2" fill="#161b22" style="animation-delay: 0.08s" />
 <rect class="day" x="24" y="105" width="11" height="11" rx="2" fill="#161b22" style="animation-delay: 0.10s" />
@@ -405,5 +404,6 @@
 <rect class="day" x="804" y="30" width="11" height="11" rx="2" fill="#39d353" style="animation-delay: 1.04s" />
 <rect class="day" x="804" y="45" width="11" height="11" rx="2" fill="#006d32" style="animation-delay: 1.06s" />
 <rect class="day" x="804" y="60" width="11" height="11" rx="2" fill="#006d32" style="animation-delay: 1.08s" />
+<rect class="day" x="804" y="75" width="11" height="11" rx="2" fill="#161b22" style="animation-delay: 1.10s" />
 
 </svg>
