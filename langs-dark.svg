@@ -22,7 +22,7 @@
 
     <text x="24" y="55" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#e6edf3">typescript</text>
     <rect x="119" y="43" width="150" height="8" rx="4" fill="#30363d"/>
-    <rect x="119" y="43" width="141.6" height="8" rx="4" fill="#3178c6"/>
+    <rect x="119" y="43" width="140.6" height="8" rx="4" fill="#3178c6"/>
     <text x="281" y="55" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#7d8590">94%</text>
     <text x="24" y="83" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#e6edf3">python</text>
     <rect x="119" y="71" width="150" height="8" rx="4" fill="#30363d"/>
@@ -35,14 +35,14 @@
     <text x="24" y="139" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#e6edf3">javascript</text>
     <rect x="119" y="127" width="150" height="8" rx="4" fill="#30363d"/>
     <rect x="119" y="127" width="2.0" height="8" rx="4" fill="#f1e05a"/>
-    <text x="281" y="139" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#7d8590">1%</text>
+    <text x="281" y="139" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#7d8590">0%</text>
     <text x="24" y="167" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#e6edf3">css</text>
     <rect x="119" y="155" width="150" height="8" rx="4" fill="#30363d"/>
     <rect x="119" y="155" width="2.0" height="8" rx="4" fill="#663399"/>
     <text x="281" y="167" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#7d8590">0%</text>
-    <text x="24" y="195" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#e6edf3">dockerfile</text>
+    <text x="24" y="195" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#e6edf3">c++</text>
     <rect x="119" y="183" width="150" height="8" rx="4" fill="#30363d"/>
-    <rect x="119" y="183" width="2.0" height="8" rx="4" fill="#384d54"/>
+    <rect x="119" y="183" width="2.0" height="8" rx="4" fill="#f34b7d"/>
     <text x="281" y="195" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#7d8590">0%</text>
     <text x="350" y="55" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#e6edf3">typescript</text>
     <rect x="445" y="43" width="150" height="8" rx="4" fill="#30363d"/>
@@ -64,8 +64,8 @@
     <rect x="445" y="155" width="150" height="8" rx="4" fill="#30363d"/>
     <rect x="445" y="155" width="50.0" height="8" rx="4" fill="#89e051"/>
     <text x="607" y="167" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#7d8590">1</text>
-    <text x="350" y="195" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#e6edf3">dockerfile</text>
+    <text x="350" y="195" font-family='"JBM Data", "Courier New", monospace' font-size="13" fill="#e6edf3">c++</text>
     <rect x="445" y="183" width="150" height="8" rx="4" fill="#30363d"/>
-    <rect x="445" y="183" width="50.0" height="8" rx="4" fill="#384d54"/>
+    <rect x="445" y="183" width="50.0" height="8" rx="4" fill="#f34b7d"/>
     <text x="607" y="195" font-family='"JBM Data", "Courier New", monospace' font-size="12" fill="#7d8590">1</text>
 </svg>

@@ -27,15 +27,13 @@
             animation: dropIn 0.35s ease-out forwards;
         }
     </style>
-<text x="24" y="22" font-family='"JBM Data", "Courier New", monospace' font-size="10" fill="#57606a">Aug</text>
-<rect class="day" x="24" y="30" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.00s" />
+<text x="24" y="22" font-family='"JBM Data", "Courier New", monospace' font-size="10" fill="#57606a">Sep</text>
 <rect class="day" x="24" y="45" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.02s" />
 <rect class="day" x="24" y="60" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.04s" />
 <rect class="day" x="24" y="75" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.06s" />
 <rect class="day" x="24" y="90" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.08s" />
 <rect class="day" x="24" y="105" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.10s" />
 <rect class="day" x="24" y="120" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.12s" />
-<text x="39" y="22" font-family='"JBM Data", "Courier New", monospace' font-size="10" fill="#57606a">Sep</text>
 <rect class="day" x="39" y="30" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.02s" />
 <rect class="day" x="39" y="45" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.04s" />
 <rect class="day" x="39" y="60" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 0.06s" />
@@ -404,6 +402,7 @@
 <rect class="day" x="789" y="90" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 1.10s" />
 <rect class="day" x="789" y="105" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 1.12s" />
 <rect class="day" x="789" y="120" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 1.14s" />
-<rect class="day" x="804" y="30" width="11" height="11" rx="2" fill="#9be9a8" style="animation-delay: 1.04s" />
+<rect class="day" x="804" y="30" width="11" height="11" rx="2" fill="#30a14e" style="animation-delay: 1.04s" />
+<rect class="day" x="804" y="45" width="11" height="11" rx="2" fill="#ebedf0" style="animation-delay: 1.06s" />
 
 </svg>
